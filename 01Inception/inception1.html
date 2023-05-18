@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste react</title>
+</head>
+
+<body>
+    <!-- 1] adding extra elements above and below the root but we generally have one root -->
+    <!-- <div id="header">Header</div>
+    <div id="root">
+        
+    </div>
+    <div id="footer">footer</div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const heading = React.createElement("h1",{},"Namaste EveryOne");
+        console.log(heading); // React element that is "heading is an object"
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading);
+        console.log(root);
+       
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <!-- 2]undersdtanding empty object inside the createelement .the element object is used to give tag attributes.
+    <h1 id="title"></h1>-->
+    <!-- <div id="root">
+
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const heading = React.createElement("h1",{
+            id: "title",
+           
+            
+           
+           
+        },
+        "Namaste EveryOne");
+
+        console.log(heading); // React element that is "heading is an object"
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading);
+        console.log(root);
+       
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 3] if we have lot of <h1>'s inside root.heading will replace the <h1>'s or heading will be below <h1>'s. -->
+        <!-- <div id="root">
+            <h1 id="title">Hello world</h1>
+            <h1 id="title">Hello world</h1>
+            <h1 id="title">Hello world</h1>
+            <h1 id="title">Hello world</h1>
+            <h1 id="title">Hello world</h1>
+        </div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <script>
+             const heading = React.createElement("h1",{
+            id: "title",
+           
+           
+        },
+        "Namaste EveryOne");
+
+        console.log(heading); // React element that is "heading is an object"
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading);
+        console.log(root);
+            
+            
+           
+        </script> -->
+
+
+
+        <!-- 4]Anytime in our app,if you see "not rendered" means there is some issue/error/react is not there or root is not configured properly.that means react is not able to modify the stuffs inside -->
+
+        <!-- <div id="root">
+            Not rendered
+        </div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+        <script>
+            const heading = React.createElement("h1",{
+                id: "title",
+               
+               
+            },
+            "Namaste EveryOne");
+    
+            console.log(heading); // React element that is "heading is an object"
+            const root = ReactDOM.createRoot(document.getElementById("root1"));
+    
+            root.render(heading);
+            console.log(root);
+        
+        </script> -->
+
+
+        <!-- 5]if everything happens properly,if root is proper -->
+        <!-- <div id="root">
+            Not rendered
+        </div>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+        <script>
+            const heading = React.createElement("h1",{
+                id: "title",
+               
+               
+            },
+            "Namaste EveryOne");
+    
+            console.log(heading); // React element that is "heading is an object"
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+    
+            root.render(heading);
+            console.log(root);
+        
+        </script> -->
+
+
+
+        
+        
+        
+        
+        
+        
+        <!-- 6]if we put the script tag before loading the react -->
+
+        <!-- <div id="root">
+            Not rendered
+        </div>
+
+        <script>
+            const heading = React.createElement("h1",{
+                id: "title",
+               
+               
+            },
+            "Namaste EveryOne");
+    
+            console.log(heading); // React element that is "heading is an object"
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+    
+            root.render(heading);
+            console.log(root);
+        
+        </script>
+        
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+        <!-- 7] if i want to create complex html struture like shown below:
+        <div id="root">
+            not rendered
+            <div id="container">
+                <h1 id="title">heading1</h1>
+                <h2 id="title">heading2</h2>
+            </div>
+         </div> -->
+
+         <div id="root">
+
+         </div>
+
+         
+         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script>
+            const heading=React.createElement("h1",{id:"title"},"heading1");
+            const heading2=React.createElement("h2",{id:"title"},"heading2");
+            const container=React.createElement("div",{id:"container"},[heading,heading2]);
+
+            const root=ReactDOM.createRoot(document.getElementById("root"));
+            root.render(container);
+
+        </script>
+         
+         
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body> 
+</html>
